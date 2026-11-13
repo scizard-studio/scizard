@@ -163,6 +163,7 @@ h1, h2, p { overflow-wrap: break-word; }
 .document-note { color: var(--muted); margin-block: .875rem 0; }
 .document section { margin-block-start: 3rem; }
 .document h2 { font-size: 1.5rem; line-height: 1.333; margin-block: 0 1rem; }
+.document h3 { font-size: 1.125rem; line-height: 1.4; margin-block: 1.75rem .5rem; }
 .document p { font-size: 1rem; line-height: 1.625; }
 .document section p { margin-block: 0 1rem; }
 .legal .site-footer nav { inline-size: min(var(--measure), 100%); }
