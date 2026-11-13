@@ -7,7 +7,21 @@
   --lime: #d8ff5b;
   --gutter: 2rem;
   --measure: 42.5rem;
+  --bg: var(--ivory);
+  --fg: var(--ink);
+  --star: var(--ink);
+  color-scheme: light dark;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--ink);
+    --fg: var(--ivory);
+    --star: var(--lime);
+    --muted: var(--stone);
+    --rule: #41433c;
+  }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -29,16 +43,17 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
   z-index: 1;
   inset: .5rem auto auto .5rem;
   padding: .75rem 1rem;
-  background: var(--ink);
-  color: var(--ivory);
+  background: var(--fg);
+  color: var(--bg);
   transform: translateY(calc(-100% - 1rem));
 }
 
 .skip-link:focus { transform: none; }
 
-:is(.scizard-symbol, .scizard-star) { fill: var(--ink); }
+.scizard-symbol { fill: var(--fg); }
+.scizard-star { fill: var(--star); }
 
-.home { background: var(--ivory); color: var(--ink); }
+.home { background: var(--bg); color: var(--fg); }
 
 .hero {
   flex: 1;
@@ -115,7 +130,7 @@ h1, h2, p { overflow-wrap: break-word; }
   border-radius: 50%;
 }
 
-.legal { background: var(--ivory); color: var(--ink); }
+.legal { background: var(--bg); color: var(--fg); }
 
 .legal-header, .document, .legal .site-footer nav {
   inline-size: min(var(--measure), calc(100% - 2 * var(--gutter)));
